@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ guide.title }}{% endblock %}
+
+{% block content %}
+<section class="job-detail">
+    <div class="container">
+        <h1 class="mb-30">{{guide.title}}</h1>
+        <p class="job-detail__content"><strong>Описание гайда: </strong>{{ guide.description }}</p>
+        <img src="{{ guide.image }}" class="guide-image" alt="{{guide.title}}">
+        <p class="job-detail__content"><strong>Дата публикации:</strong> {{ guide.created_at|date:"d.m.Y" }}</p>
+    </div>
+</section>
+{% endblock %}
